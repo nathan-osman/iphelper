@@ -22,20 +22,41 @@
  * IN THE SOFTWARE.
  */
 
-#include <QApplication>
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include "mainwindow.h"
+#include <QLabel>
+#include <QMainWindow>
+#include <QNetworkAccessManager>
+#include <QPushButton>
 
-int main(int argc, char **argv)
+class MainWindow : public QMainWindow
 {
-    QApplication::setApplicationName("IP Helper");
-    QApplication::setOrganizationName("Nathan Osman");
-    QApplication::setOrganizationDomain("com.nathanosman");
+    Q_OBJECT
 
-    QApplication app(argc, argv);
+public:
 
-    MainWindow mainWindow;
-    mainWindow.show();
+    explicit MainWindow(QWidget *parent = nullptr);
 
-    return app.exec();
-}
+private slots:
+
+    void refreshIP();
+    void copyIP();
+
+    void onReplyFinished();
+
+private:
+
+    QNetworkAccessManager mNetworkAccessManager;
+
+    QLabel *mLoadingLabel;
+    QLabel *mAddressLabel;
+    QLabel *mErrorLabel;
+
+    QPushButton *mRefreshButton;
+    QPushButton *mCopyButton;
+
+    QString mText;
+};
+
+#endif // MAINWINDOW_H
