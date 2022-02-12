@@ -71,7 +71,7 @@ MainWindow::MainWindow(QWidget *parent)
     resize(480, 200);
 
     setWindowTitle(tr("IP Helper"));
-    setWindowIcon(QIcon(":/logo.png"));
+    setWindowIcon(QIcon(":/iphelper.png"));
 
     refreshIP();
 }

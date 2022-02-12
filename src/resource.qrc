@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>logo.png</file>
+        <file>iphelper.png</file>
     </qresource>
 </RCC>
 

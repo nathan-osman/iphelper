@@ -16,3 +16,11 @@ target_include_directories(iphelper PRIVATE)
 target_link_libraries(iphelper Qt5::Network Qt5::Widgets)
 
 install(TARGETS iphelper RUNTIME DESTINATION bin)
+
+install(FILES "iphelper.png"
+    DESTINATION "share/pixmaps"
+)
+
+install(FILES "iphelper.desktop"
+    DESTINATION "share/applications"
+)
