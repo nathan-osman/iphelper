@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=IP Helper
+Exec=iphelper
+Icon=iphelper
+Terminal=false
